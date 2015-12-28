@@ -1,0 +1,58 @@
+// BasePlug.idl : IDL source for BasePlug
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (BasePlug.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(D7A9A5F8-5B1C-4D61-8987-0AAE05DCD096),
+	dual,
+	nonextensible,
+	helpstring("IWebUI Interface"),
+	pointer_default(unique)
+]
+interface IWebUI : IDispatch{
+	[id(1), helpstring("method MicphoneBoost")] HRESULT MicphoneBoost([in] LONG isBoost);
+	[id(2), helpstring("method OpenVoiceSet")] HRESULT OpenVoiceSet(void);
+	[id(3), helpstring("method GetAllPlay")] HRESULT GetAllPlay([out,retval] BSTR* payList);
+	[id(4), helpstring("method OpenPlay")] HRESULT OpenPlay([in] BSTR exePath);
+	[id(5), helpstring("method StereoMix")] HRESULT StereoMix([in] LONG bIsMix);
+	[id(6), helpstring("method IsAdminControl")] HRESULT IsAdminControl([out,retval] LONG* isAdmin);
+	[id(7), helpstring("method ListenMySelf")] HRESULT ListenMySelf(void);
+	[id(8), helpstring("method TestUpdate")] HRESULT TestUpdate(void);
+	[id(9), helpstring("method GetVersion")] HRESULT GetVersion([out,retval] BSTR* strVersion);
+};
+
+[
+	uuid(975572E4-B68A-417F-8A8A-42619685F733),
+	version(1.0),
+	helpstring("BasePlug 1.0 Type Library")
+]
+library BasePlugLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(2DD4B76B-E668-4A6D-B4F3-B53B4FAB2F4D),
+		helpstring("_IWebUIEvents Interface")
+	]
+	dispinterface _IWebUIEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(31CDE2B7-EC7B-409A-B88B-C2CF637B86BD),
+		control,
+		helpstring("WebUI Class")
+	]
+	coclass WebUI
+	{
+		[default] interface IWebUI;
+		[default, source] dispinterface _IWebUIEvents;
+	};
+};

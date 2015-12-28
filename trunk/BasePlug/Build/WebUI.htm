@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE>ATL 8.0 test page for object WebUI</TITLE>
+</HEAD>
+<BODY>
+
+
+<OBJECT ID="WebUI" codeBase="BasePlug.cab#version=1,0,0,1"  CLASSID="CLSID:31CDE2B7-EC7B-409A-B88B-C2CF637B86BD"></OBJECT>
+
+
+
+<input type="button" value="BoostOn" onclick="BoostOn();" />
+<input type="button" value="BoostOff" onclick="BoostOff();" />
+<input type="button" value="StereoMixOn" onclick="StereoMixOn();" />
+<input type="button" value="StereoMixOff" onclick="StereoMixOff();" />
+<input type="button" value="OpenVoiceSet" onclick="OpenVoiceSet();" />
+<input type="button" value="GetAllPlay" onclick="getPlay();" />
+<input type="button" value="OpenPlay" onclick="OpenPlay();" />
+<input type="button" value="IsAdmin" onclick="IsAdmin();" />
+
+<script type="text/javascript">
+    function BoostOn() {
+        var calc = document.getElementById('WebUI');
+         calc.MicphoneBoost(1); 
+    }
+    function BoostOff() {
+        var calc = document.getElementById('WebUI');
+         calc.MicphoneBoost(0); 
+    }
+    function StereoMixOn() {
+        var calc = document.getElementById('WebUI');
+         calc.StereoMix(1); 
+    }
+    function StereoMixOff() {
+        var calc = document.getElementById('WebUI');
+         calc.StereoMix(0); 
+    }
+    
+    function OpenVoiceSet() {
+        var calc = document.getElementById('WebUI');
+         calc.OpenVoiceSet(); 
+    }
+   
+    function getPlay() {
+
+         var calc = document.getElementById('WebUI');
+
+       var result = calc.GetAllPlay();
+        alert(result);
+
+    }
+    
+    function OpenPlay() {
+         var calc = document.getElementById('WebUI');
+          var   a="C:\\Program Files\\Windows Media Player\\mplayer2.exe"; 
+          calc.OpenPlay(a);
+    }
+    function IsAdmin() {
+         var calc = document.getElementById('WebUI');
+          var result = calc.IsAdminControl();
+          alert(result);
+          
+    }
+    
+     
+    
+
+</script>
+
+</BODY>
+</HTML>

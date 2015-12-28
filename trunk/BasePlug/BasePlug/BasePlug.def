@@ -1,0 +1,9 @@
+; BasePlug.def : Declares the module parameters.
+
+LIBRARY      "BasePlug.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

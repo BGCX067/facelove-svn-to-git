@@ -1,0 +1,16 @@
+-----------------------
+makecert   -sk Baseplug Baseplug.pvk
+
+makecert   -n   CN=Kge   Kge
+
+makecert   -sk   Baseplug.pvk   Kge.cer
+
+cert2spc   root.cer   Kge.cer   Kge.spc
+----------------------
+makecert -sk Kge -n "CN=Kge" Kge.cer
+cert2spc Kge.cer Kge.spc
+----------------------
+makecert -sk Kge Kge.pvk -n CN=Kge
+makecert -sk Kge.pvk Kge.cer
+cert2spc Kge.cer Kge.spc
+cabarc -s 6144 n BasePlug.cab BasePlug.dll setup.inf

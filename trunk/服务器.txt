@@ -1,0 +1,18 @@
+用户名:yr.jin@91kge.com
+URL:www.google.com/a/91kge.com
+
+
+yr.jin@91kge.com 123456
+svn://192.168.1.201/svnroot/c
+
+code.google.com
+https://facelove.googlecode.com/svn/trunk/
+99553804@qq.com
+Rg4AQ7uE4qz3
+
+Regsvr32   [/s]   [/n]   [/i[:cmdline]]   dllname
+
+　/u   卸载安装的控件，卸载服务器注册；
+　/s   注册成功后不显示操作成功信息框；
+　/i   调用DllInstall函数并把可选参数[cmdline]传给它，当使用/u时用来卸载DLL；
+  /n   不调用DllRegisterServer，该参数必须和/i一起使用

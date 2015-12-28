@@ -1,0 +1,1 @@
+del /f /s /q /a *.obj *.pch *.ncb *.ilk *.bsc *.pdb *.sbr *.exe.m* *.exe.e* *.exe.i* *.idb *.exp

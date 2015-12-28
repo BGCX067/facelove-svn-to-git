@@ -1,0 +1,13 @@
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[Add.Code]
+BasePlug.dll=BasePlug.dll
+
+[BasePlug.dll]
+file-win32-x86=thiscab 
+clsid={31CDE2B7-EC7B-409A-B88B-C2CF637B86BD}
+FileVersion=1, 0, 0, 1
+RegisterServer=yes
+DestDir=11
